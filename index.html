@@ -132,40 +132,30 @@
             <h1>Welcome Back</h1>
             <p>Please sign in to your account</p>
         </div>
-        
-        <!-- Message containers that will be shown via URL parameters -->
         <div id="success-message" class="success-message message">
-            SUCCESS - Login successful!
-        </div>
-        
+            SUCCESS - Logged in successfuly!
+        </div>        
         <div id="error-message" class="error-message message">
-            MALA GID YA - Invalid credentials!
-        </div>
-        
+            WALA GID YA - Invalid credentials... Try Again!
+        </div>        
         <form method="POST" action="login.php">
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required placeholder="Enter your email">
-            </div>
-            
+            </div>            
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required placeholder="Enter your password">
             </div>
-            
             <button type="submit" class="login-btn">Sign In</button>
-        </form>
-        
+        </form>       
         <div class="footer">
             <p>&copy; 2025 PSITS Login System. All rights reserved.</p>
         </div>
     </div>
-
     <script>
-        // Check for URL parameters to show messages
         const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-        
+        const status = urlParams.get('status');     
         if (status === 'success') {
             document.getElementById('success-message').style.display = 'block';
         } else if (status === 'error') {
@@ -173,4 +163,5 @@
         }
     </script>
 </body>
+
 </html>
