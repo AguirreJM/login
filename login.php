@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "SUCCESS";
         exit();      
     } else {
-        echo "MALA GID YA";
+        echo "WALA GID YA";
     }
     
     mysqli_close($conn);
@@ -24,4 +24,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header("Location: index.html");
     exit();
 }
+
 ?>
